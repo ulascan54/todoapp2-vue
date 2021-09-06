@@ -9,6 +9,7 @@
         <i aria-hidden="true" class="material-icons">{{ filterValue }}</i>
       </button>
     </div>
+    <h1></h1>
     <div class="items" v-if="items.length > 0">
       <li
         v-for="(item, index) in filteredItems"
@@ -105,10 +106,10 @@ export default {
   computed: {
     filterValue() {
       return this.filter === 0
-        ? "check_box_outline_blank"
+        ? "indeterminate_check_box"
         : this.filter === 1
-        ? "check_box"
-        : "indeterminate_check_box";
+        ? "check_box_outline_blank"
+        : "check_box";
     },
   },
 };
